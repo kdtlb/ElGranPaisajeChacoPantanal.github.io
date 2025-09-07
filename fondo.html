@@ -1,0 +1,32 @@
+<div id="selector-fondo" style="
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+    font-family: 'Segoe UI', sans-serif;">
+  <button onclick="document.getElementById('opciones-fondo').classList.toggle('visible')"
+    style="background-color:#2f3e4e; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer;">
+    Fondo
+  </button>
+  <div id="opciones-fondo" style="
+    display:none;
+    background-color:white;
+    border:1px solid #ccc;
+    margin-top:5px;
+    border-radius:5px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);">
+    <div onclick="cambiarFondo('osm')" style="padding:8px; cursor:pointer;">OpenStreetMap</div>
+    <div onclick="cambiarFondo('positron')" style="padding:8px; cursor:pointer;">Claro (CartoDB Positron)</div>
+    <div onclick="cambiarFondo('dark')" style="padding:8px; cursor:pointer;">Oscuro (CartoDB DarkMatter)</div>
+    <div onclick="cambiarFondo('satellite')" style="padding:8px; cursor:pointer;">Satélite (ESRI)</div>
+  </div>
+</div>
+
+<style>
+#opciones-fondo.visible {
+    display: block !important;
+}
+#opciones-fondo div:hover {
+    background-color: #eee;
+}
+</style>
